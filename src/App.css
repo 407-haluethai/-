@@ -1,0 +1,134 @@
+/* สไตล์พื้นฐานของแอป */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* สีพื้นหลังขาว */
+  padding: 2rem;
+  min-height: 100vh; /* ขยายให้เต็มหน้าจอ */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333; /* สีข้อความหลัก */
+}
+
+/* หัวข้อหลัก */
+h1 {
+  font-size: 2.5rem; /* ขนาดตัวอักษรใหญ่พอเหมาะ */
+  color: #8e44ad; /* สีม่วงเข้ม */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* เงาของข้อความ */
+  border-bottom: 2px solid #8e44ad; /* เส้นใต้หัวข้อ */
+  padding-bottom: 10px;
+}
+
+/* ปรับขนาดและจัดแนวของภาพหลัก */
+.image-container {
+  margin: 20px 0;
+}
+
+img {
+  border-radius: 15px; /* มุมของภาพโค้งมน */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เงาของภาพ */
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* การเปลี่ยนแปลงขนาด */
+  max-width: 80vw; /* ขนาดสูงสุด 80% ของความกว้างหน้าจอ */
+  max-height: 60vh; /* ขนาดสูงสุด 60% ของความสูงหน้าจอ */
+}
+
+/* เพิ่มการย่อขยายภาพเมื่อ hover */
+img:hover {
+  transform: scale(1.05);
+}
+
+/* ปรับรูปแบบปุ่ม */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+  flex-wrap: wrap; /* ปรับให้ปุ่มเรียงตามความกว้าง */
+}
+
+button {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6); /* ไล่สีม่วง */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5e3370, #b491c8); /* ไล่สีม่วงเข้มและม่วงอ่อนเมื่อ hover */
+  transform: scale(1.05); /* ขยายปุ่มเล็กน้อยเมื่อ hover */
+}
+
+/* รูปภาพในปุ่ม */
+.icon {
+  width: 24px; /* ขนาดของไอคอน */
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* ปรับข้อความระดับ */
+h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #8e44ad, #b491c8); /* ไล่สีม่วงสำหรับพื้นหลังข้อความ */
+  -webkit-background-clip: text; /* ใช้พื้นหลังเป็นข้อความ */
+  -webkit-text-fill-color: transparent; /* ทำให้ข้อความโปร่งใสเพื่อให้เห็นพื้นหลัง */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาของข้อความ */
+}
+
+/* กำหนดขนาดและการจัดวางของ root */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ปรับสไตล์ของโลโก้ */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #8e44adaa); /* เงาของโลโก้เมื่อ hover */
+}
+
+/* ปรับการหมุนของโลโก้ */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
